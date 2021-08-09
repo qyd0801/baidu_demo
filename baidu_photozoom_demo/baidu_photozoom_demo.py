@@ -28,7 +28,7 @@ def enlarge_image(image_file,access_token):
     image       = get_img_base64str(image_file)
     data        = {"image":image}
     params       = {'access_token':access_token}
-    request_url = "https://aip.baidubce.com/rest/2.0/image-classify/v1/image_quality_enhance"
+    request_url = "https://aip.baidubce.com/rest/2.0/image-process/v1/image_definition_enhance"
     res = requests.post(request_url,params = params,data = data)
     try:
         image_data = res.json()['image']
